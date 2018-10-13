@@ -1,7 +1,6 @@
 package au.com.capita.api.controllers;
 
-import java.util.HashMap;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -11,27 +10,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import au.com.capita.api.models.RequestInput;
 import au.com.capita.api.models.ResponseStatus;
+import au.com.capita.api.service.CalculatorService;
 
+
+//Need to implement Logger and the code can be more generic
 @RestController
-//@RequestMapping(value="/user")
 public class CalculatorController {
+	@Autowired
+	private CalculatorService service;
 
-  
-  @PostMapping(value="/calculate",consumes = MediaType.APPLICATION_JSON_VALUE, 
-	        produces = MediaType.APPLICATION_JSON_VALUE )
-  public ResponseEntity<ResponseStatus> doCalculation(@RequestBody RequestInput input) {
-	 String value =  input.getValue();
-	  ResponseStatus respone = new ResponseStatus();
-    try {
-    	respone.setNumber("1263636");
-    }
-    catch(Exception ex) {
-     System.out.println();
-    }
-  //return new User(101, "name");
-  
-    return new ResponseEntity(respone, HttpStatus.OK);
-  }
-  
+	@PostMapping(value = "/calculate", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ResponseStatus> doCalculation(@RequestBody RequestInput input) {
+		String value = input.getValue();
+		ResponseEntity<ResponseStatus> respone= null;
+		try {
+			respone = service.calculationOp(value);
+		} catch (Exception ex) {
+			//loger impl
+		}
+		return new ResponseEntity(respone, HttpStatus.OK);
+	}
 
-} // class UserController
+} 
