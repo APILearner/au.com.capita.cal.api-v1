@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import au.com.capita.api.dto.CompanyDto;
 import au.com.capita.api.models.RequestInput;
 import au.com.capita.api.models.ResponseStatus;
 import au.com.capita.api.service.CalculatorService;
@@ -31,4 +32,19 @@ public class CalculatorController {
 		return new ResponseEntity(respone, HttpStatus.OK);
 	}
 
+	@PostMapping(value = "/jackson", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ResponseStatus> doCalculation(@RequestBody CompanyDto companyDto) {
+		
+		
+		System.out.println();
+		ResponseEntity<ResponseStatus> respone= null;
+		
+		System.out.println(companyDto);
+		try {
+			//respone = service.calculationOp(companyDto);
+		} catch (Exception ex) {
+			//loger impl
+		}
+		return new ResponseEntity(respone, HttpStatus.OK);
+	}
 } 
