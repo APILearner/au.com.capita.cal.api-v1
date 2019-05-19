@@ -1,6 +1,7 @@
 package au.com.capita.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
