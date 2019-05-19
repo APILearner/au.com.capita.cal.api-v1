@@ -1,0 +1,77 @@
+{
+	"id": "d0cca1ee-453c-ee7d-3e7e-e661d59c92cb",
+	"name": "Jackson_databinding_for abstract class 2 implementation class",
+	"description": "",
+	"order": [
+		"7234cf45-5e1a-e622-4e4f-add436f099b5",
+		"36228017-a0d7-cda8-dca6-7051ff89972f"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1558294787406,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "36228017-a0d7-cda8-dca6-7051ff89972f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/jackson",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1558294853166,
+			"name": "http://localhost:8080/jackson visa managed",
+			"description": "Jackson object creation based on type.if abstract class have 2 implementation ",
+			"collectionId": "d0cca1ee-453c-ee7d-3e7e-e661d59c92cb",
+			"responses": [],
+			"rawModeData": "{\r\n\"companyId\":\"10001\",\r\n\"verificationData\":{\r\n\"type\":\"visaManaged\",\r\n\"value\":{\r\n\"verificationTransactionId\":\"12345\"\r\n}\r\n}\r\n}"
+		},
+		{
+			"id": "7234cf45-5e1a-e622-4e4f-add436f099b5",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/jackson",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "d0cca1ee-453c-ee7d-3e7e-e661d59c92cb",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8080/jackson",
+			"description": "Jackson object creation based on type.if abstract class have 2 implementation ",
+			"descriptionFormat": "html",
+			"time": 1558294790196,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\r\n\"companyId\":\"10001\",\r\n\"verificationData\":{\r\n\"type\":\"partnerManaged\",\r\n\"value\":{\r\n\"partnerCompanyId\":\"3333\",\r\n\"partnerEmailId\":\"tech.java\"\r\n}\r\n}\r\n}"
+		}
+	]
+}

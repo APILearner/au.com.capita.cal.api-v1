@@ -11,7 +11,7 @@ import au.com.capita.api.models.ResponseStatus;
 public class HealthCheckAPI {
 
   @GetMapping("/healthCheck")
-  public ResponseEntity getStatus() {
+  public ResponseEntity<ResponseStatus> getStatus() {
 	  ResponseStatus respone = new ResponseStatus();
 	  respone.setStatus("SUCCESS");
       return new ResponseEntity<>(respone, HttpStatus.OK);
