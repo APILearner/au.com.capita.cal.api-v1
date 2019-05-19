@@ -45,6 +45,6 @@ public class CalculatorController {
 		} catch (Exception ex) {
 			//loger impl
 		}
-		return new ResponseEntity(respone, HttpStatus.OK);
+		return new ResponseEntity(companyDto, HttpStatus.OK);
 	}
 } 
